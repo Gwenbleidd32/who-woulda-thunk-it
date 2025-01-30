@@ -45,7 +45,7 @@ pipeline {
         }
         stage('Apply Terraform') {
             steps {
-                input message: "Approve Terraform Apply?", ok: "Deploy"
+                //input message: "Approve Terraform Apply?", ok: "Deploy"
                 withCredentials([[
                     $class: 'AmazonWebServicesCredentialsBinding',
                     credentialsId: 'pooper-scooper'
