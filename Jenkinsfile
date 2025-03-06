@@ -51,7 +51,8 @@ pipeline {
                     snykInstallation: 'sneaky',  // Name of Snyk installation in Jenkins
                     snykTokenId: 'dober' // Jenkins credential ID for Snyk API Token
                 )
-            }              
+            } 
+        }                 
         stage('Apply Terraform') {
             steps {
                 //input message: "Approve Terraform Apply?", ok: "Deploy"
