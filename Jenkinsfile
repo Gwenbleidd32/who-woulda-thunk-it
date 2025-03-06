@@ -50,7 +50,7 @@ pipeline {
                     snykInstallation: 'sneaky',  // Name of Snyk installation in Jenkins
                     snykTokenId: 'dober' , // Jenkins credential ID for Snyk API Token
                     additionalArguments: '--severity-threshold=low --iac ${WORKSPACE}',
-                    failOnIssues: false
+                    failOnIssues: false ,
                     monitorOnBuild: false  //
                 )
             } 
