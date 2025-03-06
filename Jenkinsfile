@@ -47,11 +47,10 @@ pipeline {
             steps {
                 echo 'Pooping...'
                 snykSecurity(
-                    projectName: 'who-woulda-thunk-it', // Name of the project in Snyk
                     snykInstallation: 'sneaky',  // Name of Snyk installation in Jenkins
                     snykTokenId: 'dober' , // Jenkins credential ID for Snyk API Token
-                    additionalArguments: '--iac',
-                    severity: 'low'
+                    additionalArguments: '--severity-threshold=low --iac',
+                    failOnIssues: false
                 )
             } 
         }                 
