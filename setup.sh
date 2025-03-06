@@ -66,7 +66,9 @@ echo '
 		<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
 		<div class="w3-display-middle">
 			<h1>Got Milk?</h1>
-			<button onclick="window.open('https://www.instagram.com/lina__melon/', '_blank')">Mayhaps</button>
+			<a href="https://www.instagram.com/lina__melon/" target="_blank">
+        <button>Mayhaps</button>
+      </a>
 		</div>
 		</div>
 
