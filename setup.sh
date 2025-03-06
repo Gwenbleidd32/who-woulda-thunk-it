@@ -23,56 +23,54 @@ vpc=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/lates
 # Use single quotes for the echo command
 echo '
 <!doctype html>
-<html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Europe</title>
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+            <style>
+                body,h1 {font-family: "Raleway", sans-serif}
+                body, html {height: 100%}
+                .bgimg {
+                  background-image: url('https://storage.googleapis.com/a-dream/milano3.jpg');
+                  min-height: 100%;
+                  background-position: center;
+                  background-size: cover;
+                }
 
-<head>
-<title>osaka-template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<style>
-body,h1 {font-family: "Raleway", sans-serif}
-body, html {height: 100%}
-.bgimg {
-  background-image: url("https://storage.googleapis.com/a-dream/don.jpg");
-  min-height: 100%;
-  background-position: center;
-  background-size: cover;
-}
+                .w3-display-middle {
+                  background-image: url('https://storage.googleapis.com/a-dream/squeeze.png');
+                  background-size: cover;
+                  padding: 250px;
+                  border-radius: 25px;
+                  text-align: center;
+                }
 
-.w3-display-middle {
-    background-color: rgba(0, 0, 0, 0.466); /* Adjust the rgba values for desired transparency */
-    padding: 20px; /* Add padding to make it look better */
-    border-radius: 10px; /* Optional: adds rounded corners */
-}
+                button { 
+                  font-size: 2em; 
+                  padding: 10px 20px; 
+                  background: transparent;
+                  color: white;
+                  border: 2px solid white;
+                  cursor: pointer;
+                }
 
-.rounded-image {
-    border-radius: 25px; /* Adjust the value as needed */
-}
-</style>
-</head>
+                button:hover {
+                  background: rgba(255, 255, 255, 0.2);
+                }
+            </style>
+        </head>
+        <body>
+		<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+		<div class="w3-display-middle">
+			<h1>Got Milk?</h1>
+			<button onclick="window.location.href='https://www.instagram.com/lina__melon/'">Continue</button>
+		</div>
+		</div>
 
-<body>
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-<div class="w3-display-topleft w3-padding-large w3-xlarge">
-<img src="https://storage.googleapis.com/a-dream/any.png" alt="Descriptive Alt Text" width="40%" height="40%" class="rounded-image">
-</div>
-<div class="w3-display-middle">
-<h1 class="w3-jumbo w3-animate-top">大阪</h1>
-<hr class="w3-border-grey" style="margin:auto;width:40%">
-<p class="w3-large w3-center">どうとんぼり</p>
-</div>
-<div class="w3-display-bottomleft w3-padding-small transparent-background outlined-text">
-<h2>Welcome to AWS</h2>
-<h3>Configuration Information</h3>
-<p><b>Instance Name:</b> '"$(hostname -f)"'</p>
-<p><b>Instance Private IP Address: </b> '"${local_ipv4}"'</p>
-<p><b>Availability Zone: </b> '"${az}"'</p>
-<p><b>VPC ID:</b> '"${vpc}"'</p>
-</div>
-</div>
-</body>
+  </body>
 </html>
 ' > /var/www/html/index.html
 
