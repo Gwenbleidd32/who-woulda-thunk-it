@@ -51,7 +51,7 @@ pipeline {
                     snykTokenId: 'dober' , // Jenkins credential ID for Snyk API Token
                     additionalArguments: '--severity-threshold=low --iac ${WORKSPACE}',
                     failOnIssues: false ,
-                    monitorOnBuild: false  //
+                    monitorProjectOnBuild: false  //
                 )
             } 
         }                 
